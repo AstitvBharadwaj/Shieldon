@@ -1,5 +1,5 @@
 function fetchPackets() {
-    fetch('http://127.0.0.1:5000/get_packets')
+        fetch("https://your-deployed-api.com/get_packets")
         .then(response => response.json())
         .then(data => {
             let tableBody = document.getElementById("packetTable");
