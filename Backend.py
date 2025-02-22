@@ -1,8 +1,10 @@
 from flask import Flask, jsonify
 from scapy.all import sniff
 import threading
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Allow requests from any origin
 
 # Store captured packets
 captured_packets = []
