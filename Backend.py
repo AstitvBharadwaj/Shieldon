@@ -1,7 +1,11 @@
 from flask import Flask, jsonify
 from scapy.all import sniff
 import threading
+
 from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)  # Allow requests from any origin
 
 app = Flask(__name__)
 CORS(app)  # Allow requests from any origin
@@ -29,3 +33,6 @@ def get_packets():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+
+
+

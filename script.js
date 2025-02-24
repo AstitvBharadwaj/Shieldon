@@ -1,5 +1,6 @@
 function fetchPackets() {
-        fetch("https://your-deployed-api.com/get_packets")
+    fetch("https://your-deployed-api.com/get_packets")
+
         .then(response => response.json())
         .then(data => {
             let tableBody = document.getElementById("packetTable");
